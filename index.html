@@ -131,15 +131,13 @@
             position: relative;
         }
         .back-btn {
-            background: rgba(0,0,0,0.28); border: none;
-            border-radius: 50%; width: 34px; height: 34px; padding: 0;
+            background: rgba(255,255,255,0.16); border: none;
+            border-radius: 50%; width: 32px; height: 32px; padding: 0;
             cursor: pointer; color: #fff; font-weight: 600;
             display: flex; align-items: center; justify-content: center;
-            position: fixed; top: 12px; left: 12px; z-index: 9999;
-            transition: all var(--transition);
-            backdrop-filter: blur(6px);
+            transition: all var(--transition); flex-shrink: 0;
         }
-        .back-btn:hover { background: rgba(0,0,0,0.42); }
+        .back-btn:hover { background: rgba(255,255,255,0.28); }
         .app-frame {
             width: 100%; max-width: 420px; height: 100vh; max-height: 100vh;
             overflow: hidden; background: var(--bg);
@@ -570,13 +568,12 @@
 
 <!-- ═══════════ APP VIEW ═══════════ -->
 <div id="app-view">
-    <button class="back-btn" onclick="closeApp()">
-        <i class="ti ti-arrow-left" style="font-size:18px;"></i>
-    </button>
-
     <div class="app-frame">
         <!-- App Bar -->
         <div class="app-bar">
+            <button class="back-btn" onclick="closeApp()">
+                <i class="ti ti-arrow-left" style="font-size:18px;"></i>
+            </button>
             <div class="logo-icon">🐟</div>
             <span class="logo-text">Le Portail du Pêcheur</span>
             <div class="app-bar-actions">
